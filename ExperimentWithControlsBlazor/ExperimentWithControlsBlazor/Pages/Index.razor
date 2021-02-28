@@ -1,0 +1,28 @@
+﻿@page "/"
+<div class="container">
+    <div class="row">
+        <h1>Experiment with controls</h1>
+    </div>
+    <div class="row mt-2">
+        <div class="col-sm-6">
+            Pick a number:
+        </div>
+        <div class="col-sm-6">
+            <input type="range" @onchange="UpdateValue" />
+        </div>
+    </div>
+    <div class="row mt-5">
+        <h2>
+            Here's the value: <strong>@DisplayValue</strong>
+        </h2>
+    </div>
+</div>
+
+@code
+{
+    private string DisplayValue = "";
+    private void UpdateValue(ChangeEventArgs e)
+    {
+        DisplayValue = e.Value.ToString();
+    }
+}
