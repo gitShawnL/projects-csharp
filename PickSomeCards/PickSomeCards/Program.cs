@@ -7,7 +7,7 @@ namespace PickSomeCards
         static void Main(string[] args)
         {
             Console.Write("Enter a number of cards to pick: ");
-            string line = Console.ReadLine();
+             string line = Console.ReadLine();
             
             if (int.TryParse(line, out int numberOfCards))
             {
@@ -17,7 +17,6 @@ namespace PickSomeCards
                 {
                     Console.WriteLine(card);
                 }
-                CardPicker.PickSomeCards(numberOfCards);
             }
             else
             {
